@@ -26,4 +26,4 @@ for x in range(0, limit):
         print("request sent")
     except:
         print("request failed")
-        time.sleep(interval)
+    time.sleep(interval)
