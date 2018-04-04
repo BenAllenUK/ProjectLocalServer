@@ -1,2 +1,2 @@
-mv ./rc.local /etc/rc.local
+cp ./rc.local /etc/rc.local
 ./runner.sh
