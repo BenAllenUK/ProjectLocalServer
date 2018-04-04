@@ -1,6 +1,6 @@
 cd /home/pi/Desktop/ProjectLocalServer
 while true; do
-  git stash
+  git reset --hard HEAD
   git pull
   python3 check-script.py
   sleep 1h
