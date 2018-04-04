@@ -3,8 +3,10 @@ import requests, time
 import json
 import copy
 
-habUrl = 'http://192.168.0.95:8080/rest/items?recursive=false'
-serverUrl = 'http://localhost:3000/update'
+enviroId = 1
+
+habUrl = 'http://localhost:8080/rest/items?recursive=false'
+serverUrl = 'http://35.231.193.82:3000/update'
 
 headers = dict(
     Accept='application/json'
@@ -14,6 +16,9 @@ headers = dict(
 resp = requests.get(url=habUrl, headers=headers)
 data = resp.json()
 headers2 = {'content-type': 'application/json'}
-requests.post(serverUrl, data=json.dumps(data), headers=headers2)
+params = {
+    'enviroId': enviroId
+}
+requests.post(serverUrl, params=params, data=json.dumps(data), headers=headers2)
 print("request sent")
     # time.sleep(5)
