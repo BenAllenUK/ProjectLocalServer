@@ -9,12 +9,12 @@ interval = 5
 limit = 720 # 60 * 60 / 5
 
 #REMOTE:
-# habUrl = 'http://localhost:8080/rest/items?recursive=false'
-# serverUrl = 'http://35.231.193.82:3000/update'
+habUrl = 'http://localhost:8080/rest/items?recursive=false'
+serverUrl = 'http://35.231.193.82:3000/update'
 
 #LOCAL:
-habUrl = 'http://192.168.0.95:8080/rest/items?recursive=false'
-serverUrl = 'http://localhost:3000/update'
+# habUrl = 'http://192.168.0.95:8080/rest/items?recursive=false'
+# serverUrl = 'http://localhost:3000/update'
 
 headers = dict(
     Accept='application/json'
