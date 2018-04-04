@@ -15,12 +15,15 @@ headers = dict(
 )
 
 for x in range(0, limit):
-    resp = requests.get(url=habUrl, headers=headers)
-    data = resp.json()
-    headers2 = {'content-type': 'application/json'}
-    params = {
-        'enviroId': enviroId
-    }
-    requests.post(serverUrl, params=params, data=json.dumps(data), headers=headers2)
-    print("request sent")
-    time.sleep(interval)
+    try:
+        resp = requests.get(url=habUrl, headers=headers)
+        data = resp.json()
+        headers2 = {'content-type': 'application/json'}
+        params = {
+            'enviroId': enviroId
+        }
+        requests.post(serverUrl, params=params, data=json.dumps(data), headers=headers2)
+        print("request sent")
+    except:
+        print("request failed")
+        time.sleep(interval)
