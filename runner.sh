@@ -1,3 +1,4 @@
+cd /home/pi/Desktop/ProjectLocalServer
 while true; do
   git stash
   git pull
