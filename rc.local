@@ -11,7 +11,7 @@
 #
 # By default this script does nothing.
 
-exec 2> /home/pi/Desktop/updates.log      # send stderr from rc.local to a log file
+exec 2> /home/pi/Desktop/launch.log      # send stderr from rc.local to a log file
 exec 1>&2                      # send stdout to the same log file
 set -x                         # tell sh to display commands before execution
 
@@ -21,6 +21,6 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 
-./home/pi/Desktop/ProjectLocalServer/runner.sh &
+./home/pi/Desktop/ProjectLocalServer/runner.sh > /home/pi/Desktop/server.log 2>&1 &
 
 exit 0
