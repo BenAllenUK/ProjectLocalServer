@@ -2,6 +2,7 @@ import urllib.request
 import requests, time
 import json
 import copy
+import datetime
 
 enviroId = 1
 interval = 5
@@ -23,7 +24,8 @@ for x in range(0, limit):
             'enviroId': enviroId
         }
         requests.post(serverUrl, params=params, data=json.dumps(data), headers=headers2)
-        print("request sent")
+        print(data)
+        print(datetime.datetime.utcnow() + " Request sent")
     except:
         print("request failed")
     time.sleep(interval)
