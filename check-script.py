@@ -5,8 +5,8 @@ import copy
 import datetime
 
 enviroId = 1
-interval = 5
-limit = 720 # 60 * 60 / 5
+interval = 30
+limit = 120 # 60 * 60 / 5
 
 #REMOTE:
 habUrl = 'http://localhost:8080/rest/items?recursive=false'
