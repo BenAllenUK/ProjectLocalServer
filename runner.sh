@@ -1,7 +1,6 @@
 cd /home/pi/Desktop/ProjectLocalServer
-echo $$
 while true; do
-  stdbuf -oL python3 check-script.py > /home/pi/Desktop/ProjectLocalServer/py-server.log
+  python3 -u check-script.py >> /home/pi/Desktop/py-server.log
   git reset --hard HEAD
   git pull
   sleep 1h

@@ -3,6 +3,9 @@ import requests, time
 import json
 import copy
 import datetime
+import os
+print("=======================")
+print(os.getpid())
 
 enviroId = 1
 interval = 30
