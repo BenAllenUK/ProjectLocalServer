@@ -22,5 +22,6 @@ if [ "$_IP" ]; then
 fi
 
 ./home/pi/Desktop/ProjectLocalServer/runner.sh &
+/etc/init.d/openhab2 start
 
 exit 0
