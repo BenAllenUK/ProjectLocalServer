@@ -16,7 +16,7 @@ habUrl = 'http://localhost:8080/rest/items?recursive=false'
 serverUrl = 'http://35.231.193.82:3000/update'
 
 #LOCAL:
-# habUrl = 'http://192.168.0.95:8080/rest/items?recursive=false'
+# habUrl = 'http://192.168.0.108:8080/rest/items?recursive=false'
 # serverUrl = 'http://localhost:3000/update'
 
 headers = dict(
@@ -31,6 +31,16 @@ for x in range(0, limit):
         params = {
             'enviroId': enviroId
         }
+        print("===========")
+        for item in data:
+            if "RelativeHumidity" in item['name']:
+                print(item['name'] + ": " + item['state'])
+        for item in data:
+            if "SensorTemperature" in item['name']:
+                print(item['name'] + ": " + item['state'])
+
+
+
         requests.post(serverUrl, params=params, data=json.dumps(data), headers=headers2)
         print(str(datetime.datetime.utcnow()) + " Request sent for environment: " + str(enviroId))
     except:
