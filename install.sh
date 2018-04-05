@@ -25,6 +25,7 @@ sudo /etc/init.d/openhab2 start
 sudo /etc/init.d/openhab2 status
 
 sudo update-rc.d openhab2 defaults
+cp ./rc.local /etc/rc.local
 clear
 hostname -I
 
