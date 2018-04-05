@@ -7,7 +7,7 @@ import os
 print("=======================")
 print(os.getpid())
 
-enviroId = 1
+enviroId = os.environ['ENV_NUM']
 interval = 30
 limit = 120 # 60 * 60 / 5
 
