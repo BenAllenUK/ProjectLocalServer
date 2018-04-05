@@ -1,6 +1,6 @@
 echo "Please enter environment number:"
 read envrioNumber
-echo $envrioNumber >> ~/Desktop/environment_number
+echo $envrioNumber >> /home/pi/Desktop/environment_number
 
 sudo systemctl enable ssh
 sudo systemctl start ssh
