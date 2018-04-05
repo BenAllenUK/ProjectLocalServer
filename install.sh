@@ -1,7 +1,6 @@
 echo "Please enter environment number:"
 read envrioNumber
-echo "export ENV_NUM="$envrioNumber >> ~/.bashrc
-source ~/.bashrc
+echo $envrioNumber >> ~/Desktop/environment_number
 
 sudo systemctl enable ssh
 sudo systemctl start ssh

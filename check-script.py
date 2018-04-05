@@ -7,7 +7,9 @@ import os
 print("=======================")
 print(os.getpid())
 
-enviroId = os.environ['ENV_NUM']
+file = open("/home/pi/Desktop/environment_number", "r")
+enviroId = file.read().replace('\n','')
+file.close()
 interval = 30
 limit = 120 # 60 * 60 / 5
 
