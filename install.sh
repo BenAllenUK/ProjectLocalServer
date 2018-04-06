@@ -25,6 +25,12 @@ sudo cp openhab2 /etc/default/openhab2
 sudo /etc/init.d/openhab2 start
 sudo /etc/init.d/openhab2 status
 
+sudo apt-get -y install xinetd
+sudo cp redirect_file /etc/xinetd.d/redirect_file
+sudo service xinetd restart
+
+curl https://www.dataplicity.com/gilxi328.py | sudo python
+
 sudo update-rc.d openhab2 defaults
 cp ./rc.local /etc/rc.local
 clear
