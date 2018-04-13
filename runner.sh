@@ -4,4 +4,5 @@ while true; do
   git reset --hard HEAD
   git pull
   sleep 1m
+  rm -f /home/pi/Desktop/py-server.log
 done
